@@ -42,9 +42,11 @@ export default function IndexPage() {
   return (
     <>
       <SocialHead
-        title={"test title"}
-        description="description og test"
-        previewImage="https://asset.mediahub.bnpparibas/is/image/bnpparibas/2022%20_%20BCEF%20Entreprises%20_%20Article_Mobilit%C3%A9s%20alternatives_1049x500"
+        title={
+          "Comment déployer la transition écologique dans votre entreprise ?"
+        }
+        description="La transition écologique, encore trop souvent perçue comme une contrainte, un coût ou un chantier trop complexe, est pourtant une belle opportunité économique. Voici les 3 étapes essentielles pour une transformation efficiente."
+        previewImage="https://maserati.scene7.com/is/image/maserati/maserati/international/Models/default/2021/mc20/MC20_front.png?$600x2000$&fmt=png-alpha&fit=constrain"
       />
       <div>
         Hello World. test L_IN
