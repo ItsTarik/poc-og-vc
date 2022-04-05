@@ -31,7 +31,8 @@ const SocialHead = ({ title, description, previewImage }) => {
       />
 
       {/* Twitter */}
-      <meta name="twitter:card" content="summary" key="twcard" />
+      {/* <meta name="twitter:card" content="summary" key="twcard" /> */}
+      <meta name="twitter:card" content="summary_large_image" key="twcard" />
       <meta name="twitter:creator" content={"twitterHandle"} key="twhandle" />
       <meta name="twitter:image" content={previewImage} key="twImage" />
     </Head>
