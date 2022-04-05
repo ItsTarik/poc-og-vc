@@ -10,7 +10,7 @@ const SocialHead = ({ title, description, previewImage }) => {
       <title>{title}</title>
 
       {/* Open Graph */}
-      <meta property="og:url" content={window.location.href} key="ogurl" />
+      <meta property="og:url" content={'https://poc-og-vc.vercel.app/'} key="ogurl" />
       <meta property="og:image" content={previewImage} key="ogimage" />
       <meta property="og:site_name" content={"siteName"} key="ogsitename" />
       <meta property="og:title" content={title} key="ogtitle" />
