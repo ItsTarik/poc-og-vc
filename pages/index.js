@@ -10,7 +10,7 @@ const SocialHead = ({ title, description, previewImage }) => {
       <title>{title}</title>
 
       {/* Open Graph */}
-      <meta property="og:url" content={"currentURL"} key="ogurl" />
+      <meta property="og:url" content={window.location.href} key="ogurl" />
       <meta property="og:image" content={previewImage} key="ogimage" />
       <meta property="og:site_name" content={"siteName"} key="ogsitename" />
       <meta property="og:title" content={title} key="ogtitle" />
@@ -33,7 +33,7 @@ export default function IndexPage() {
         previewImage="https://asset.mediahub.bnpparibas/is/image/bnpparibas/2022%20_%20BCEF%20Entreprises%20_%20Article_Mobilit%C3%A9s%20alternatives_1049x500"
       />
       <div>
-        Hello World.{" "}
+        Hello World.{" "} test L_IN
         <Link href="/about">
           <a>About</a>
         </Link>
