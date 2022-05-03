@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Head from "next/head";
 
 const SocialHead = ({ title, description, previewImage }) => {
@@ -38,28 +39,22 @@ const SocialHead = ({ title, description, previewImage }) => {
   );
 };
 
-export default function IndexPage({ title, description, srcUrl }) {
+export default function IndexPage() {
   return (
     <>
       <SocialHead
-        title={title}
-        description={description}
+        title={
+          "Comment déployer la transition écologique dans votre entreprise ?"
+        }
+        description="La transition écologique, encore trop souvent perçue comme une contrainte, un coût ou un chantier trop complexe, est pourtant une belle opportunité économique. Voici les 3 étapes essentielles pour une transformation efficiente."
         previewImage="https://maserati.scene7.com/is/image/maserati/maserati/international/Models/default/2021/mc20/MC20_front.png?$600x2000$&fmt=png-alpha&fit=constrain"
       />
-      <h1 style={{ textAlign: "center" }}>OG social testing</h1>
       <div>
-        <a href={srcUrl}>see</a>
+        Hello World. test L_IN
+        <Link href="/about">
+          <a>About</a>
+        </Link>
       </div>
     </>
   );
 }
-
-export const getServerSideProps = async ({ query }) => {
-  return {
-    props: {
-      title: query.title,
-      description: query.description,
-      srcUrl: srcUrl,
-    },
-  };
-};
