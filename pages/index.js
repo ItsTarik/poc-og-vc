@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const SocialHead = ({ title, description, previewImage }) => {
   return (
@@ -40,20 +41,18 @@ const SocialHead = ({ title, description, previewImage }) => {
 };
 
 export default function IndexPage() {
+  const router = useRouter();
+  const { title, description, srcUrl } = router.query;
   return (
     <>
       <SocialHead
-        title={
-          "Comment déployer la transition écologique dans votre entreprise ?"
-        }
-        description="La transition écologique, encore trop souvent perçue comme une contrainte, un coût ou un chantier trop complexe, est pourtant une belle opportunité économique. Voici les 3 étapes essentielles pour une transformation efficiente."
+        title={title}
+        description={description}
         previewImage="https://maserati.scene7.com/is/image/maserati/maserati/international/Models/default/2021/mc20/MC20_front.png?$600x2000$&fmt=png-alpha&fit=constrain"
       />
       <div>
-        Hello World. test L_IN
-        <Link href="/about">
-          <a>About</a>
-        </Link>
+        OG social testing
+        <a href={srcUrl}>see</a>
       </div>
     </>
   );
