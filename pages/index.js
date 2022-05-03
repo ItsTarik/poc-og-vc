@@ -1,6 +1,4 @@
-import Link from "next/link";
 import Head from "next/head";
-import { useRouter } from "next/router";
 
 const SocialHead = ({ title, description, previewImage }) => {
   return (
@@ -40,9 +38,7 @@ const SocialHead = ({ title, description, previewImage }) => {
   );
 };
 
-export default function IndexPage() {
-  const router = useRouter();
-  const { title, description, srcUrl } = router.query;
+export default function IndexPage({ title, description, srcUrl }) {
   return (
     <>
       <SocialHead
@@ -50,10 +46,20 @@ export default function IndexPage() {
         description={description}
         previewImage="https://maserati.scene7.com/is/image/maserati/maserati/international/Models/default/2021/mc20/MC20_front.png?$600x2000$&fmt=png-alpha&fit=constrain"
       />
+      <h1 style={{ textAlign: "center" }}>OG social testing</h1>
       <div>
-        OG social testing
         <a href={srcUrl}>see</a>
       </div>
     </>
   );
 }
+
+export const getServerSideProps = async ({ query }) => {
+  return {
+    props: {
+      title: query.title,
+      description: query.description,
+      srcUrl: srcUrl,
+    },
+  };
+};
